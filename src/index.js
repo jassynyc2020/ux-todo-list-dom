@@ -30,8 +30,7 @@ function renderTodoApp() {
   for (let i = 0; i < todos.length; i++) {
     let choresList = todos[i];
     let choresListMarkup = `
-    <li class="list-item"><input type="checkbox">
-      <p>${choresList.description}</p>
+    <li class="list-item"><input type="checkbox">${choresList.description}
     </input></li>
     `;
     ul.innerHTML += choresListMarkup;
