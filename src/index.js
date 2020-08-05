@@ -22,6 +22,7 @@ function renderTodoApp() {
   let h1 = document.createElement("h1");
   let ul = document.createElement("ul");
   ul.classList.add("todo-container");
+  ul.style = "list-style: none;";
 
   h1.innerText = `Todo List`;
   app.appendChild(h1);
