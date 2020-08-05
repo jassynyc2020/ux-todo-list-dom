@@ -1,32 +1,34 @@
-
 let todos = [
-    {
-        completed: false,
-        description: "Take Jim to the hair salon"
-    },
-    {
-        completed: true,
-        description: "Drop off wedding invitation at mailbox"
-    },
-    {
-        completed: false,
-        description: "Pick up the cake"
-    },
-    {
-        completed: false,
-        description: "Call the caterers"
-    }
+  {
+    completed: false,
+    description: "Take Jim to the hair salon",
+  },
+  {
+    completed: true,
+    description: "Drop off wedding invitation at mailbox",
+  },
+  {
+    completed: false,
+    description: "Pick up the cake",
+  },
+  {
+    completed: false,
+    description: "Call the caterers",
+  },
 ];
 
 function renderTodoApp() {
-    let app = document.querySelector("#app")
-    let h1 = document.createElement("h1")
-    // your code here
+  let app = document.querySelector("#app");
+  let h1 = document.createElement("h1");
 
-    h1.innerText = "Todo List"
+  let li = document.createElement("li");
+  for (let i = 1; (i = todos.length); i++) {
+    document.createElement(`ul`);
+  }
 
-    app.appendChild(h1)
-    // and maybe some here
+  h1.innerText = `Todo List`;
+
+  app.appendChild(h1);
 }
-
-renderTodoApp()
+console.log(`${todos}`);
+renderTodoApp();
