@@ -38,4 +38,15 @@ function renderTodoApp() {
   }
 }
 
+let textElement = document;
+
 renderTodoApp();
+
+function renderNewTodo() {
+  document.getElementById("textFieldElement").innerHTML = newTodo();
+}
+
+let newTextBtn = document.querySelectorI("textFieldElement");
+newTextBtn.onclick = () => {
+  alert("Add todo item");
+};
