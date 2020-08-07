@@ -36,17 +36,28 @@ function renderTodoApp() {
     `;
     ul.innerHTML += choresListMarkup;
   }
+  let textElement = document;
+  let form = document.querySelector("#newTextBtn");
+
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    let formInput = document.querySelector("#inputNewTodo").value;
+    let li = document.createElement("li");
+    let input = `<input type="checkbox">${formInput}
+    </input>`;
+    li.innerHTML += input;
+    ul.appendChild(li);
+  };
 }
 
-let textElement = document;
+// let li = document.createElement("li");
+// let input = `<input type="checkbox"></input>`
+// li.innerHTML += input;
+
+// <li class="list-item">
+//   <input type="checkbox">
+//     ${choresList.description}
+//   </input>
+// </li>
 
 renderTodoApp();
-
-function renderNewTodo() {
-  document.getElementById("textFieldElement").innerHTML = newTodo();
-}
-
-let newTextBtn = document.querySelectorI("textFieldElement");
-newTextBtn.onclick = () => {
-  alert("Add todo item");
-};
